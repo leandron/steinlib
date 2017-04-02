@@ -138,9 +138,9 @@ class TestSteinlibParser(unittest.TestCase):
         steiner_instance = steiner_instance or SteinlibInstance()
         sut = SteinlibParser(lines, steiner_instance)
         _ = sut.parse()
-        self.assertEquals(sut._state, ParsingState.end,
-                          'State should be "end". Expecting %s but is %s' %
-                          (ParsingState.end, sut._state))
+        self.assertEqual(sut._state, ParsingState.end,
+                         'State should be "end". Expecting %s but is %s' %
+                         (ParsingState.end, sut._state))
         return sut
 
 
