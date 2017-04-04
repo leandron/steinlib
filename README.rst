@@ -1,4 +1,5 @@
-# SteinLib Python Parser
+SteinLib Python Parser
+======================
 
 |build-status| |docs|
 
