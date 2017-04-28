@@ -45,7 +45,7 @@ class TestSteinlibParser(unittest.TestCase):
             sut.parse()
         except SteinlibParsingException as ex:
             # check state even when the parser throws an (expected) exception
-            self.assertEquals(sut._state, ParsingState.wait_for_section,
+            self.assertEqual(sut._state, ParsingState.wait_for_section,
                               'Initial should be wait_for_section. '
                               'expecting %s but is %s' %
                               (ParsingState.wait_for_section, sut._state))
