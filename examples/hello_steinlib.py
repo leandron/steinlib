@@ -11,8 +11,11 @@ class MySteinlibInstance(SteinlibInstance):
     This is my first steinlib parser!
     """
 
-    def comment(self, raw_args, lis_args):
+    def comment(self, raw_args, list_args):
         print "Comment section found"
+
+    def comment__end(self, raw_args, list_args):
+        print "Comment section end"
 
     def coordinates(self, raw_args, list_args):
         print "Coordinates section found"
@@ -35,3 +38,4 @@ if __name__ == "__main__":
     with open(sys.argv[1]) as my_file:
         my_parser = SteinlibParser(my_file, my_class)
         my_parser.parse()
+
